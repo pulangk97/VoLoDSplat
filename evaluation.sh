@@ -17,5 +17,5 @@ test.save_gt_image=false \
 test.save_input_images=false \
 test.save_video=false \
 test.save_gaussian=false \
-output_dir=outputs/volodsplat-re10k-256x256-test-attention-multiloss-da3-chunk10-levelembedding-benchmark \
-checkpointing.pretrained_model=outputs/re10k-256x256-v1-attention-multiloss-da3-levelembedding/checkpoints/epoch_2-step_150000.ckpt
+output_dir=outputs/volodsplat-re10k-256x256 \
+checkpointing.pretrained_model=outputs/re10k-256x256/checkpoints/epoch_2-step_150000.ckpt
