@@ -1,0 +1,15 @@
+python -m src.main +experiment=re10k \
+data_loader.train.batch_size=1 \
+'dataset.roots'='["datasets/re10k"]' \
+dataset.test_chunk_interval=10 \
+dataset.num_context_views=6 \
+trainer.max_steps=150000 \
+train.eval_model_every_n_val=2000000 \
+model.encoder.num_scales=2 \
+model.encoder.upsample_factor=2 \
+model.encoder.lowest_feature_resolution=4 \
+model.encoder.monodepth_vit_type=vitb \
+output_dir=outputs/re10k-256x256-v1-attention-multiloss-da3-levelembedding-2 \
+wandb.project=volodsplat-v1-attention-multiloss-da3-levelembedding-2 \
+checkpointing.pretrained_mvdepth=pretrained/gmflow-scale1-things-e9887eda.pth \
+checkpointing.resume=True
